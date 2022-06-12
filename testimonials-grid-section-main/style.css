@@ -1,0 +1,231 @@
+:root {
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%)
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+body {
+  font-size: 13px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background-color: var(--Light-grayish-blue)
+}
+
+
+
+.container {
+  display: flex;
+  width: 1100px;
+  height: 550px;
+  margin: calc((100vh - 550px) / 2) auto;
+  justify-content: space-between;
+  align-content: space-between
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: 355px;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between
+  }
+}
+
+.four {
+  display: flex;
+  width: 73%;
+  height: 100%;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap
+}
+
+@media (max-width: 575px) {
+  .four {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: nowrap
+  }
+}
+
+img {
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+  margin-right: 25px
+}
+
+.name {
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  line-height: 1.5
+}
+
+.name span { display: block }
+
+.name span:first-of-type { color: var(--White) }
+
+.name span:last-of-type { color: var(--White); opacity: 50% }
+
+p { line-height: 1.3; }
+
+.first-p {
+  color: var(--White);
+  font-weight: 600;
+  font-size: 21px;
+  margin: 8px 0;
+}
+
+.second-p {
+  color: var(--White);
+  opacity: 70%;
+}
+
+@media (max-width: 575px) {
+  .p { line-height: 1.4 }
+
+  .first-p { font-size: 20px }
+
+  .second-p { font-size: 16px }
+}
+
+
+.right, .top-left, .top-right, .bottom-left, .bottom-right { padding: 20px 25px }
+
+.right {
+  width: 25.5%;
+  height: 100%;
+  background-color: var(--White);
+  border-radius: 10px;
+  padding: 20px 29px
+}
+
+@media (max-width: 575px) {
+  .right {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .right .first-p {
+    font-size: 22px
+  }
+
+  .right .second-p {
+    font-size: 17px;
+  }
+}
+
+.right .second-p {
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.top-left,
+.bottom-right {
+  flex-basis: 69%;
+  max-width: 69%;
+  height: 49%;
+  border-radius: 10px;
+}
+
+@media (max-width: 575px) {
+  .top-left, .bottom-right {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.top-left{ background-color: var(--Moderate-violet); margin-bottom: 2%; margin-right: 2% }
+
+@media (max-width: 575px) {
+  .top-left {
+    margin-right: 0;
+  }
+}
+
+.bottom-right { background-color: var(--Very-dark-blackish-blue); margin-left: 2% }
+
+@media (max-width: 575px) {
+  .bottom-right {
+    margin-left: 0;
+  }
+
+  .bottom-right .second-p {
+    font-size: 17px;
+  }
+}
+
+.top-right,
+.bottom-left {
+  background-color: var(--Very-dark-blackish-blue);
+  flex-basis: 29%;
+  max-width: 29%;
+  height: 49%;
+  border-radius: 10px;
+}
+
+@media (max-width: 575px) {
+  .top-right, .bottom-left {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .marg {
+    margin-bottom: 4%;
+  }
+}
+
+.top-right { background-color: var(--Very-dark-grayish-blue) }
+
+.bottom-left { background-color: var(--White) }
+
+.bottom-left .second-p, .bottom-right .second-p {
+  line-height: 1.5;
+}
+
+.right .name span:first-of-type,
+.bottom-left .name span:first-of-type {
+  color: var(--Very-dark-blackish-blue);
+} 
+
+.right .name span:last-of-type,
+.bottom-left .name span:last-of-type {
+  color: var(--Very-dark-blackish-blue);
+  opacity: 50%
+}
+
+.right .first-p,
+.bottom-left .first-p {
+  color: var(--Very-dark-blackish-blue);
+}
+
+.right .second-p,
+.bottom-left .second-p {
+  color: var(--Very-dark-blackish-blue);
+  opacity: 70%;
+}
+
+footer { font-size: 20px; text-align: center; text-align: center; }
+.attribution a { color: var(--Moderate-violet) }
+
+@media (max-width: 575px) {
+  footer {
+    font-size: 16px;
+  }
+}

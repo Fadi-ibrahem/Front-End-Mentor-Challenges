@@ -1,0 +1,159 @@
+:root {
+--Cyan: hsl(179, 62%, 43%);
+--Bright-Yellow: hsl(71, 73%, 54%);
+--Light-Gray: hsl(204, 43%, 93%);
+--Grayish-Blue: hsl(218, 22%, 67%)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  background-color: #E6EFF6;
+}
+
+.container {
+  display: flex;
+  width: 650px;
+  height: 500px;
+  margin: calc((100vh - 500px) / 2) auto;
+  flex-wrap: wrap
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: 360px;
+    height: auto;
+    margin: 40px auto;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+
+.first, .second, .last {
+  padding: 30px 35px;
+}
+
+.first {
+  background-color: white;
+  width: 100%;
+  height: 45%;
+  border-radius: 10px 10px 0 0;
+}
+
+.first h2:first-of-type {
+  color: var(--Cyan);
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.first h2:last-of-type {
+  color: var(--Bright-Yellow);
+  margin-bottom: 20px;
+}
+
+.first p {
+  color: #b7b7b9;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.second {
+  width: 50%;
+  background-color: var(--Cyan);
+  height: 55%;
+  border-radius: 0 0 0 10px;
+}
+
+@media (max-width: 575px) {
+  .second {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+}
+
+.second h2 {
+  color: #E7FFFF;
+  margin-bottom: 15px;
+}
+
+.second p:first-of-type {
+  color: var(--Light-Gray);
+  margin-bottom: 10px;
+}
+
+.second p:first-of-type span:first-of-type {
+  display: inline-block;
+  color: white;
+  font-size: 35px;
+  margin-right: 5px;
+  
+}
+
+.second p:first-of-type span:last-of-type {
+  position: relative;
+  top: -6px;
+  opacity: .7;
+}
+
+.second p:last-of-type {
+  color: var(--Light-Gray);
+  margin-bottom: 40px
+}
+
+.second button {
+  display: block;
+  background-color: var(--Bright-Yellow);
+  color: var(--Light-Gray);
+  width: 100%;
+  border: none;
+  padding: 18px 0;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.second button:hover {
+  color: white;
+}
+
+.last {
+  width: 50%;
+  background-color: #4ABEBD;
+  height: 55%;
+  border-radius: 0 0 10px 0;
+}
+
+@media (max-width: 575px) {
+  .last {
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.last h2 {
+  color: #E7FFFF;
+  margin-bottom: 15px;
+}
+
+.last p {
+  color: var(--Light-Gray);
+  line-height: 1.5;
+  opacity: .7;
+}
+
+.attribution { font-size: 18px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 575px) {
+  .attribution {
+    font-size: 13px;
+  }
+}
